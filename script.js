@@ -139,6 +139,50 @@ const skillObserver = new IntersectionObserver((entries) => {
 skillBars.forEach(bar => skillObserver.observe(bar));
 
 /* ========================================
+  3D TILT INTERACTIONS (subtle)
+  - Desktop only (requires hover + fine pointer)
+  - Respects prefers-reduced-motion
+  ======================================== */
+const canTilt =
+  window.matchMedia('(hover: hover)').matches &&
+  window.matchMedia('(pointer: fine)').matches &&
+  !window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+if (canTilt) {
+  const tiltTargets = document.querySelectorAll(
+    '.project-card, .skill-group, .achievement-card, .platform-card, .btn'
+  );
+
+  tiltTargets.forEach((el) => {
+    el.classList.add('tilt-card');
+
+    el.addEventListener('mousemove', (e) => {
+      const rect = el.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+
+      const px = x / rect.width;
+      const py = y / rect.height;
+
+      // keep it subtle (no "gamey" wobble)
+      const max = el.classList.contains('btn') ? 6 : 8;
+      const rx = (py - 0.5) * -max;
+      const ry = (px - 0.5) * max;
+
+      el.style.setProperty('--mx', `${Math.round(px * 100)}%`);
+      el.style.setProperty('--my', `${Math.round(py * 100)}%`);
+      el.style.transform = `perspective(900px) rotateX(${rx.toFixed(2)}deg) rotateY(${ry.toFixed(2)}deg) translateY(-1px)`;
+      el.classList.add('is-tilting');
+    }, { passive: true });
+
+    el.addEventListener('mouseleave', () => {
+      el.style.transform = '';
+      el.classList.remove('is-tilting');
+    });
+  });
+}
+
+/* ========================================
    FOOTER YEAR
    ======================================== */
 const yearEl = document.getElementById('year');
@@ -171,19 +215,30 @@ if (contactForm) {
       return;
     }
 
-    // --- REPLACE THE BLOCK BELOW WITH YOUR ACTUAL FORM SUBMISSION ---
-    // Example using Formspree:
-    //   const res = await fetch('https://formspree.io/f/YOUR_ID', {
-    //     method: 'POST',
-    //     headers: { 'Content-Type': 'application/json' },
-    //     body: JSON.stringify({ name, email, message })
-    //   });
-    //   if (res.ok) { ... }
-    // ---------------------------------------------------------------
+    // Formspree submission (sends to your email)
+    try {
+      showFormMessage('Sending…', 'success');
 
-    // Demo success response:
-    showFormMessage('✓ Message sent! I\'ll reply within 24 hours.', 'success');
-    contactForm.reset();
+      const res = await fetch('https://formspree.io/f/xojbradb', {
+        method: 'POST',
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ name, email, message }),
+      });
+
+      if (res.ok) {
+        showFormMessage('✓ Message sent! I\'ll reply within 24 hours.', 'success');
+        contactForm.reset();
+        return;
+      }
+
+      // Formspree returns JSON with error details sometimes; keep message user-friendly.
+      showFormMessage('Something went wrong. Please try again or email me directly.', 'error');
+    } catch (err) {
+      showFormMessage('Network error. Please check your connection and try again.', 'error');
+    }
   });
 }
 
