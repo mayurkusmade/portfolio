@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mayur Kusmade — AI & Data Science</title>
+  <meta name="description" content="Portfolio of Mayur Kusmade, AI & Data Science student at Sanjivani University. Specializing in ML, NLP, and data engineering." />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:wght@300;400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ========== NAVIGATION ========== -->
+  <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
+    <div class="nav-container">
+      <a href="#home" class="nav-logo" aria-label="Mayur Kusmade — Home">
+        <span class="logo-text">MK</span>
+        <span class="logo-dot"></span>
+      </a>
+
+      <ul class="nav-links" id="navLinks" role="list">
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#achievements" class="nav-link">Achievements</a></li>
+        <li><a href="#education" class="nav-link">Education</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <!-- Dark mode toggle -->
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark/light mode" title="Toggle theme">
+          <i class="fas fa-moon" id="themeIcon"></i>
+        </button>
+        <!-- Hamburger -->
+        <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile nav overlay -->
+  <div class="nav-overlay" id="navOverlay" aria-hidden="true"></div>
+
+  <!-- ========== HERO ========== -->
+  <section class="hero" id="home" aria-label="Hero section">
+    <!-- Animated grid background -->
+    <div class="hero-grid" aria-hidden="true"></div>
+    <!-- Floating orbs -->
+    <div class="orb orb-1" aria-hidden="true"></div>
+    <div class="orb orb-2" aria-hidden="true"></div>
+
+    <div class="hero-content">
+      <div class="hero-badge reveal">
+        <span class="badge-dot"></span>
+        <span>Open to opportunities — 2025</span>
+      </div>
+
+      <h1 class="hero-title reveal delay-1">
+        <span class="hero-name">Mayur</span>
+        <span class="hero-name accent-line">Kusmade</span>
+      </h1>
+
+      <p class="hero-tagline reveal delay-2">
+        <em>AI &amp; Data Science Student</em> · Aspiring ML Engineer
+      </p>
+
+      <p class="hero-desc reveal delay-3">
+        I build machine learning systems, NLP pipelines, and data-driven applications. Currently pursuing B.Tech in AI &amp; Data Science at Sanjivani University, Pune — turning ideas into published research and working software.
+      </p>
+
+      <div class="hero-cta reveal delay-4">
+        <a href="#projects" class="btn btn-primary">
+          <i class="fas fa-rocket" aria-hidden="true"></i>
+          View Projects
+        </a>
+        <!-- REPLACE: update href to your actual resume file path -->
+        <a href="1779962332834_resume__2_.pdf" class="btn btn-outline" download aria-label="Download Mayur's resume">
+          <i class="fas fa-download" aria-hidden="true"></i>
+          Download Resume
+        </a>
+      </div>
+
+      <!-- Quick stats -->
+      <div class="hero-stats reveal delay-5">
+        <div class="stat">
+          <span class="stat-num">3+</span>
+          <span class="stat-label">Projects Built</span>
+        </div>
+        <div class="stat-divider" aria-hidden="true"></div>
+        <div class="stat">
+          <span class="stat-num">1</span>
+          <span class="stat-label">Published Paper</span>
+        </div>
+        <div class="stat-divider" aria-hidden="true"></div>
+        <div class="stat">
+          <span class="stat-num">8.52</span>
+          <span class="stat-label">CGPA</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-scroll" aria-hidden="true">
+      <div class="scroll-line"></div>
+      <span>scroll</span>
+    </div>
+  </section>
+
+  <!-- ========== ABOUT ========== -->
+  <section class="section about" id="about" aria-labelledby="about-heading">
+    <div class="container">
+      <div class="section-label reveal">
+        <span class="label-num">01</span>
+        <span>About Me</span>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-text reveal">
+          <h2 id="about-heading" class="section-title">
+            Crafting intelligent systems<br/>
+            <em>from data to deployment.</em>
+          </h2>
+          <p class="about-body">
+            I'm a second-year B.Tech student specializing in Artificial Intelligence &amp; Data Science at Sanjivani University, Pune (CGPA 8.52). My work spans NLP, machine learning model development, and real-world data engineering — with a published research paper in JETIR.
+          </p>
+          <p class="about-body">
+            I thrive at the intersection of problem-solving and engineering: whether that's building a multi-disease prediction framework, designing an AI conversation coach, or competing in university hackathons. I'm actively seeking internships in Data Engineering, Data Analysis, or ML roles.
+          </p>
+          <div class="about-location">
+            <i class="fas fa-location-dot" aria-hidden="true"></i>
+            <span>Pune, Maharashtra, India</span>
+          </div>
+        </div>
+
+        <!-- Side card -->
+        <div class="about-card reveal delay-2">
+          <div class="card-inner">
+            <div class="card-row">
+              <span class="card-key">Degree</span>
+              <span class="card-val">B.Tech AI &amp; DS</span>
+            </div>
+            <div class="card-row">
+              <span class="card-key">University</span>
+              <span class="card-val">Sanjivani University</span>
+            </div>
+            <div class="card-row">
+              <span class="card-key">Batch</span>
+              <span class="card-val">2024 – 2028</span>
+            </div>
+            <div class="card-row">
+              <span class="card-key">CGPA</span>
+              <span class="card-val highlight">8.52 / 10</span>
+            </div>
+            <div class="card-row">
+              <span class="card-key">Status</span>
+              <span class="card-val status-open">
+                <span class="pulse-dot"></span> Open to Work
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== PROJECTS ========== -->
+  <section class="section projects" id="projects" aria-labelledby="projects-heading">
+    <div class="container">
+      <div class="section-label reveal">
+        <span class="label-num">02</span>
+        <span>Projects</span>
+      </div>
+      <h2 id="projects-heading" class="section-title reveal">Selected Work</h2>
+
+      <div class="projects-grid">
+
+        <!-- Project 1 -->
+        <article class="project-card reveal" aria-label="Convo-Coach project">
+          <div class="project-index" aria-hidden="true">01</div>
+          <div class="project-body">
+            <h3 class="project-title">Convo-Coach</h3>
+            <p class="project-subtitle">AI Conversation Coach</p>
+            <p class="project-desc">
+              An interactive NLP tool that analyzes speech patterns and provides real-time feedback on tone, clarity, and engagement. Features personalized coaching modules driven by user performance history.
+            </p>
+            <div class="project-tags" aria-label="Technologies used">
+              <span class="tag">Python</span>
+              <span class="tag">NLP</span>
+              <span class="tag">Sentiment Analysis</span>
+              <span class="tag">NLTK</span>
+            </div>
+          </div>
+          <div class="project-links">
+            <!-- REPLACE: add your actual GitHub repo URL -->
+            <a href="#" class="project-link" aria-label="GitHub repo for Convo-Coach" target="_blank" rel="noopener">
+              <i class="fab fa-github" aria-hidden="true"></i> GitHub
+            </a>
+          </div>
+        </article>
+
+        <!-- Project 2 -->
+        <article class="project-card reveal delay-1" aria-label="Disease Prediction System project">
+          <div class="project-index" aria-hidden="true">02</div>
+          <div class="project-badge">Published Research</div>
+          <div class="project-body">
+            <h3 class="project-title">Disease Prediction System</h3>
+            <p class="project-subtitle">Multi-Disease ML Framework</p>
+            <p class="project-desc">
+              ML models that detect early signs of diabetes, cancer, and Parkinson's disease using structured medical datasets. Research published in JETIR journal; involved feature engineering, preprocessing, and rigorous model evaluation.
+            </p>
+            <div class="project-tags" aria-label="Technologies used">
+              <span class="tag">Python</span>
+              <span class="tag">Scikit-learn</span>
+              <span class="tag">Pandas</span>
+              <span class="tag">NumPy</span>
+              <span class="tag">Feature Engineering</span>
+            </div>
+          </div>
+          <div class="project-links">
+            <!-- REPLACE: add your actual JETIR paper URL -->
+            <a href="#" class="project-link" aria-label="Read published JETIR paper" target="_blank" rel="noopener">
+              <i class="fas fa-file-alt" aria-hidden="true"></i> Read Paper
+            </a>
+            <!-- REPLACE: add your GitHub repo URL -->
+            <a href="#" class="project-link" aria-label="GitHub repo for Disease Prediction" target="_blank" rel="noopener">
+              <i class="fab fa-github" aria-hidden="true"></i> GitHub
+            </a>
+          </div>
+        </article>
+
+        <!-- Project 3 -->
+        <article class="project-card reveal delay-2" aria-label="Fake News Detection project">
+          <div class="project-index" aria-hidden="true">03</div>
+          <div class="project-body">
+            <h3 class="project-title">Fake News Detector</h3>
+            <p class="project-subtitle">NLP Classification System</p>
+            <p class="project-desc">
+              An NLP-based classifier that identifies fraudulent news articles using ensemble learning methods. Evaluated on labeled news datasets with improved robustness over baseline models.
+            </p>
+            <div class="project-tags" aria-label="Technologies used">
+              <span class="tag">Python</span>
+              <span class="tag">NLP</span>
+              <span class="tag">Ensemble Learning</span>
+              <span class="tag">Scikit-learn</span>
+              <span class="tag">NLTK</span>
+            </div>
+          </div>
+          <div class="project-links">
+            <!-- REPLACE: add your GitHub repo URL -->
+            <a href="#" class="project-link" aria-label="GitHub repo for Fake News Detector" target="_blank" rel="noopener">
+              <i class="fab fa-github" aria-hidden="true"></i> GitHub
+            </a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SKILLS ========== -->
+  <section class="section skills" id="skills" aria-labelledby="skills-heading">
+    <div class="container">
+      <div class="section-label reveal">
+        <span class="label-num">03</span>
+        <span>Skills</span>
+      </div>
+      <h2 id="skills-heading" class="section-title reveal">Technical Toolkit</h2>
+
+      <div class="skills-grid">
+
+        <div class="skill-group reveal">
+          <h3 class="skill-group-title">
+            <i class="fas fa-code" aria-hidden="true"></i> Languages
+          </h3>
+          <div class="skill-bars">
+            <div class="skill-bar-item">
+              <div class="skill-bar-label">
+                <span>Python</span><span>90%</span>
+              </div>
+              <div class="skill-bar-track" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" aria-label="Python proficiency 90%">
+                <div class="skill-bar-fill" data-width="90"></div>
+              </div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="skill-bar-label">
+                <span>SQL</span><span>80%</span>
+              </div>
+              <div class="skill-bar-track" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" aria-label="SQL proficiency 80%">
+                <div class="skill-bar-fill" data-width="80"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-group reveal delay-1">
+          <h3 class="skill-group-title">
+            <i class="fas fa-brain" aria-hidden="true"></i> AI / ML
+          </h3>
+          <div class="skill-tags">
+            <span class="skill-tag">Scikit-learn</span>
+            <span class="skill-tag">PyTorch</span>
+            <span class="skill-tag">NLP</span>
+            <span class="skill-tag">NLTK</span>
+            <span class="skill-tag">Sentiment Analysis</span>
+            <span class="skill-tag">Ensemble Methods</span>
+            <span class="skill-tag">Feature Engineering</span>
+            <span class="skill-tag">Model Evaluation</span>
+          </div>
+        </div>
+
+        <div class="skill-group reveal delay-2">
+          <h3 class="skill-group-title">
+            <i class="fas fa-chart-bar" aria-hidden="true"></i> Data Science
+          </h3>
+          <div class="skill-tags">
+            <span class="skill-tag">NumPy</span>
+            <span class="skill-tag">Pandas</span>
+            <span class="skill-tag">Matplotlib</span>
+            <span class="skill-tag">Seaborn</span>
+            <span class="skill-tag">Tableau</span>
+            <span class="skill-tag">Power BI</span>
+            <span class="skill-tag">Excel</span>
+          </div>
+        </div>
+
+        <div class="skill-group reveal delay-3">
+          <h3 class="skill-group-title">
+            <i class="fas fa-database" aria-hidden="true"></i> Databases &amp; Tools
+          </h3>
+          <div class="skill-tags">
+            <span class="skill-tag">MySQL</span>
+            <span class="skill-tag">PostgreSQL</span>
+            <span class="skill-tag">Git</span>
+            <span class="skill-tag">Jupyter Notebook</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== ACHIEVEMENTS ========== -->
+  <section class="section achievements" id="achievements" aria-labelledby="achievements-heading">
+    <div class="container">
+      <div class="section-label reveal">
+        <span class="label-num">04</span>
+        <span>Achievements</span>
+      </div>
+      <h2 id="achievements-heading" class="section-title reveal">Recognition &amp; Certifications</h2>
+
+      <div class="achievements-grid">
+
+        <div class="achievement-card reveal" aria-label="University Dashboard Winner">
+          <div class="achievement-icon"><i class="fas fa-trophy" aria-hidden="true"></i></div>
+          <div class="achievement-body">
+            <span class="achievement-category">Award</span>
+            <h3 class="achievement-title">University Dashboard Competition</h3>
+            <p class="achievement-desc">Winner of the university-level dashboard-making competition, demonstrating advanced data visualization skills.</p>
+          </div>
+        </div>
+
+        <div class="achievement-card reveal delay-1" aria-label="Published Researcher">
+          <div class="achievement-icon"><i class="fas fa-file-alt" aria-hidden="true"></i></div>
+          <div class="achievement-body">
+            <span class="achievement-category">Research</span>
+            <h3 class="achievement-title">Published Research — JETIR</h3>
+            <p class="achievement-desc">Co-authored a conference paper on multi-disease prediction (diabetes, cancer, Parkinson's) using machine learning frameworks.</p>
+            <!-- REPLACE: add your JETIR paper URL -->
+            <a href="#" class="achievement-link" target="_blank" rel="noopener">Read Paper <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+          </div>
+        </div>
+
+        <div class="achievement-card reveal delay-2" aria-label="IBM Python Certification">
+          <div class="achievement-icon"><i class="fas fa-certificate" aria-hidden="true"></i></div>
+          <div class="achievement-body">
+            <span class="achievement-category">Certification</span>
+            <h3 class="achievement-title">IBM — Python for Data Science</h3>
+            <p class="achievement-desc">IBM-certified proficiency in Python for data science applications and workflows.</p>
+          </div>
+        </div>
+
+        <div class="achievement-card reveal delay-3" aria-label="IBM Machine Learning Certification">
+          <div class="achievement-icon"><i class="fas fa-certificate" aria-hidden="true"></i></div>
+          <div class="achievement-body">
+            <span class="achievement-category">Certification</span>
+            <h3 class="achievement-title">IBM — Machine Learning</h3>
+            <p class="achievement-desc">IBM-certified in core machine learning algorithms, model training, and evaluation techniques.</p>
+          </div>
+        </div>
+
+        <div class="achievement-card reveal delay-1" aria-label="HackerRank SQL 5-Star">
+          <div class="achievement-icon"><i class="fab fa-hackerrank" aria-hidden="true"></i></div>
+          <div class="achievement-body">
+            <span class="achievement-category">Platform Badge</span>
+            <h3 class="achievement-title">HackerRank SQL — 5-Star</h3>
+            <p class="achievement-desc">Achieved 5-star rating in SQL on HackerRank; proficient in joins, aggregations, filtering, and subqueries.</p>
+          </div>
+        </div>
+
+        <div class="achievement-card reveal delay-2" aria-label="Skill India AI Program">
+          <div class="achievement-icon"><i class="fas fa-award" aria-hidden="true"></i></div>
+          <div class="achievement-body">
+            <span class="achievement-category">Government Program</span>
+            <h3 class="achievement-title">SOAR — AI to Acquire (Skill India)</h3>
+            <p class="achievement-desc">Completed Government of India's AI-readiness program covering AI fundamentals, basic ML, neural networks, and responsible AI use.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== EDUCATION ========== -->
+  <section class="section education" id="education" aria-labelledby="education-heading">
+    <div class="container">
+      <div class="section-label reveal">
+        <span class="label-num">05</span>
+        <span>Education</span>
+      </div>
+      <h2 id="education-heading" class="section-title reveal">Academic Background</h2>
+
+      <div class="edu-card reveal">
+        <div class="edu-icon" aria-hidden="true">
+          <i class="fas fa-graduation-cap"></i>
+        </div>
+        <div class="edu-body">
+          <div class="edu-meta">
+            <span class="edu-year">2024 – 2028 (Expected)</span>
+            <span class="edu-status">Currently Enrolled</span>
+          </div>
+          <h3 class="edu-degree">B.Tech in Artificial Intelligence &amp; Data Science</h3>
+          <p class="edu-uni">Sanjivani University, Pune, Maharashtra</p>
+          <div class="edu-cgpa">
+            <span class="cgpa-label">Current CGPA</span>
+            <span class="cgpa-value">8.52 / 10</span>
+          </div>
+          <div class="edu-courses">
+            <span class="course-tag">Machine Learning</span>
+            <span class="course-tag">Deep Learning</span>
+            <span class="course-tag">Data Structures</span>
+            <span class="course-tag">Database Systems</span>
+            <span class="course-tag">NLP</span>
+            <span class="course-tag">Data Analytics</span>
+            <span class="course-tag">Statistics</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========== CODING PLATFORMS ========== -->
+  <section class="section platforms" id="platforms" aria-labelledby="platforms-heading">
+    <div class="container">
+      <div class="section-label reveal">
+        <span class="label-num">06</span>
+        <span>Coding Profiles</span>
+      </div>
+      <h2 id="platforms-heading" class="section-title reveal">Find Me Online</h2>
+
+      <div class="platforms-grid">
+
+        <!-- REPLACE: update all href values with your actual profile URLs -->
+        <a href="https://github.com/" class="platform-card reveal" target="_blank" rel="noopener" aria-label="GitHub profile">
+          <i class="fab fa-github platform-icon" aria-hidden="true"></i>
+          <span class="platform-name">GitHub</span>
+          <span class="platform-handle">@mayurkusmade</span>
+          <i class="fas fa-arrow-right platform-arrow" aria-hidden="true"></i>
+        </a>
+
+        <a href="https://linkedin.com/in/mayur-kusmade" class="platform-card reveal delay-1" target="_blank" rel="noopener" aria-label="LinkedIn profile">
+          <i class="fab fa-linkedin platform-icon" aria-hidden="true"></i>
+          <span class="platform-name">LinkedIn</span>
+          <span class="platform-handle">mayur-kusmade</span>
+          <i class="fas fa-arrow-right platform-arrow" aria-hidden="true"></i>
+        </a>
+
+        <a href="https://www.hackerrank.com/" class="platform-card reveal delay-2" target="_blank" rel="noopener" aria-label="HackerRank profile">
+          <i class="fab fa-hackerrank platform-icon" aria-hidden="true"></i>
+          <span class="platform-name">HackerRank</span>
+          <span class="platform-handle">5★ SQL Badge</span>
+          <i class="fas fa-arrow-right platform-arrow" aria-hidden="true"></i>
+        </a>
+
+        <a href="https://kaggle.com/" class="platform-card reveal delay-3" target="_blank" rel="noopener" aria-label="Kaggle profile">
+          <i class="fab fa-kaggle platform-icon" aria-hidden="true"></i>
+          <span class="platform-name">Kaggle</span>
+          <span class="platform-handle">@mayurkusmade</span>
+          <i class="fas fa-arrow-right platform-arrow" aria-hidden="true"></i>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CONTACT ========== -->
+  <section class="section contact" id="contact" aria-labelledby="contact-heading">
+    <div class="container">
+      <div class="section-label reveal">
+        <span class="label-num">07</span>
+        <span>Contact</span>
+      </div>
+      <h2 id="contact-heading" class="section-title reveal">
+        Let's build something<br/><em>together.</em>
+      </h2>
+      <p class="contact-sub reveal">
+        I'm actively looking for internships and collaborative projects. Drop me a message and I'll respond within 24 hours.
+      </p>
+
+      <div class="contact-grid">
+
+        <!-- Contact info -->
+        <div class="contact-info reveal">
+          <a href="mailto:mayurkusmade13@gmail.com" class="contact-item" aria-label="Email Mayur">
+            <div class="contact-icon"><i class="fas fa-envelope" aria-hidden="true"></i></div>
+            <div>
+              <span class="contact-label">Email</span>
+              <span class="contact-value">mayurkusmade13@gmail.com</span>
+            </div>
+          </a>
+          <a href="https://linkedin.com/in/mayur-kusmade" class="contact-item" target="_blank" rel="noopener" aria-label="LinkedIn profile">
+            <div class="contact-icon"><i class="fab fa-linkedin" aria-hidden="true"></i></div>
+            <div>
+              <span class="contact-label">LinkedIn</span>
+              <span class="contact-value">linkedin.com/in/mayur-kusmade</span>
+            </div>
+          </a>
+          <!-- REPLACE: add your actual GitHub profile URL -->
+          <a href="https://github.com/" class="contact-item" target="_blank" rel="noopener" aria-label="GitHub profile">
+            <div class="contact-icon"><i class="fab fa-github" aria-hidden="true"></i></div>
+            <div>
+              <span class="contact-label">GitHub</span>
+              <span class="contact-value">github.com/mayurkusmade</span>
+            </div>
+          </a>
+          <div class="contact-item no-link" aria-label="Location">
+            <div class="contact-icon"><i class="fas fa-location-dot" aria-hidden="true"></i></div>
+            <div>
+              <span class="contact-label">Location</span>
+              <span class="contact-value">Pune, Maharashtra, India</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Simple contact form -->
+        <form class="contact-form reveal delay-2" id="contactForm" novalidate aria-label="Contact form">
+          <div class="form-group">
+            <label for="name" class="form-label">Your Name</label>
+            <input type="text" id="name" name="name" class="form-input" placeholder="Jane Smith" required autocomplete="name" />
+          </div>
+          <div class="form-group">
+            <label for="email" class="form-label">Email Address</label>
+            <input type="email" id="email" name="email" class="form-input" placeholder="jane@example.com" required autocomplete="email" />
+          </div>
+          <div class="form-group">
+            <label for="message" class="form-label">Message</label>
+            <textarea id="message" name="message" class="form-input form-textarea" placeholder="I'd love to collaborate on…" required rows="5"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full" aria-label="Send message">
+            <i class="fas fa-paper-plane" aria-hidden="true"></i>
+            Send Message
+          </button>
+          <p class="form-note" id="formMessage" aria-live="polite"></p>
+        </form>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer" role="contentinfo">
+    <div class="footer-container">
+      <div class="footer-top">
+        <a href="#home" class="footer-logo" aria-label="Back to top">
+          <span>MK</span><span class="logo-dot"></span>
+        </a>
+        <div class="footer-social" aria-label="Social links">
+          <a href="mailto:mayurkusmade13@gmail.com" aria-label="Email" class="social-link"><i class="fas fa-envelope" aria-hidden="true"></i></a>
+          <a href="https://linkedin.com/in/mayur-kusmade" target="_blank" rel="noopener" aria-label="LinkedIn" class="social-link"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
+          <!-- REPLACE: update with actual GitHub URL -->
+          <a href="https://github.com/" target="_blank" rel="noopener" aria-label="GitHub" class="social-link"><i class="fab fa-github" aria-hidden="true"></i></a>
+          <a href="https://www.hackerrank.com/" target="_blank" rel="noopener" aria-label="HackerRank" class="social-link"><i class="fab fa-hackerrank" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-copy">
+          &copy; <span id="year"></span> Mayur Sunil Kusmade. All rights reserved.
+        </p>
+        <p class="footer-built">Built with <i class="fas fa-heart" aria-hidden="true"></i> in Pune, India</p>
+      </div>
+    </div>
+
+    <!-- Back to top -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top" title="Back to top">
+      <i class="fas fa-chevron-up" aria-hidden="true"></i>
+    </button>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
